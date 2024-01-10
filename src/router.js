@@ -1,7 +1,7 @@
 import { createElement } from './utils';
 
 import Page1 from './page1';
-import Counter from './Counter';
+
 import Page3 from './page3';
 
 export function initRouter(mainView) {
