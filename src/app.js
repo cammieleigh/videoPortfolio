@@ -1,13 +1,20 @@
 import { createElement } from './utils';
 import { initRouter } from './router';
+import menuBtn from './images/menu-icon.webp';
+import logo from './images/logo-partial.png';
 
 function Header(mainDiv) {
-  const appTitle = createElement('h1', {
-    textContent: 'JKL',
-    className: 'heading',
+
+  const menubtn = createElement('img', {src: menuBtn, className:'menuImg'} )
+  const hamburger = createElement('button', 
+  {
+   className: 'btn'}, [menubtn]);
+   
+  const appTitle = createElement('img', {
+    src: logo, className:'logo', alt: 'Mountain West Logo'
   });
 
-  const appTitlesub = createElement('h2', {textContent: 'studios', className:'heading__subtitle'})
+
 
   // nav items
   const page1 = createElement('a', {
@@ -23,9 +30,16 @@ function Header(mainDiv) {
     textContent: 'Page 3',
   });
 
-  const nav = createElement('nav', {}, [page1, page2, page3]);
+  const navDiv = createElement ('div', {className: 'navBar__items'}, [page1, page2, page3]);
+  const nav = createElement('nav', {className: 'navBar'}, [navDiv]);
 
-  return createElement('header', {}, [appTitle, appTitlesub, nav]);
+  function show() {
+    navDiv.classList.toggle('showMenu');
+ 
+}
+hamburger.addEventListener('click', show);
+
+  return createElement('header', {}, [hamburger, appTitle, nav]);
 }
 
 function Footer() {

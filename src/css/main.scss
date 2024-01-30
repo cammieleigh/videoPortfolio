@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+// 008080
+// c5dfde
+// b87333
+$background-color: #faf9f6;
+$accent-1: #b87333;
+
+
+#root{
+    margin: 0;
+    max-width: 100%;
+  
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: $background-color;
+    width: 100%;
+    
+}
+
+// footer{
+//     margin-top: 50px;
+// }
+
+header{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.heading{
+    font-size: 8vw;
+    line-height: .5em;
+    &__subtitle{
+        font-size: 6vw;
+    }
+}
+
+.logo{
+    width: 25%;
+    height: auto;
+    
+    
+}
+
+.navBar__items{
+    display: none;
+    width: 50vw;
+}
+
+.showMenu{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.95;
+  height: 75vw;
+}
+
+
+
+.btn{
+    background: none;
+    border: none;
+    width: 10vw;
+    right: 100px;
+    display: inline-block;
+    position: absolute;
+    z-index: 6;
+    
+}
+
+
+
+.menuImg{
+    width: 75%;
+    height: auto;
+}
+
+.info{
+    
+    margin: auto;
+    text-align: center;
+    width: 80vw;
+    &__card{
+        font-size: 6vw;
+        border: 2px solid;
+        padding: 20px;
+        margin-top: 20px;
+     
+
+    }
+}
+
+.mainImg{
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+    // opacity: 60%;
+    // position: relative;
+}
+
+.mainHeading{
+    position: absolute;
+    font-size: 8vw;
+    text-align: center;
+    color: #5D3F24;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.6);
+    width: 80vw;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'roboto', sans-serif;
+}
+
+.mainWelcome{
+    position: relative;
+}
+
+@media only screen and (min-width: 600px){
+
+    header{
+        justify-content: space-evenly;
+    }
+    .btn{
+        display: none;
+    }
+
+    .navBar{
+        
+
+        &__items{
+            display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+          
+            font-size: 2em;
+        
+        }
+    }
+
+    .logo{
+        width: 15vh;
+    }
+
+   
+}
+
+@media only screen and (min-width: 1000px){
+    .logo{
+        width: 15vh;
+    }
+
+    .mainWelcome{
+        display: flex;
+        flex-direction: row-reverse;
+        margin:  0;
+        width: 80%;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+    .mainImg{
+        width: 45vw;
+        display: block;
+        
+        position: static;
+    }
+
+    .mainHeading{
+        background: none;
+        text-align: center;
+        font-size: 3.5em;
+        margin: 0;
+        width: 45vw;
+        position: static;
+        transform: none;    ;
+        -webkit-transform: none    ;
+        -moz-transform: none    ;
+        -ms-transform: none    ;
+        -o-transform: none    ;
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    &__card{
+        font-size: 2em;
+    }
+}
+
+}
