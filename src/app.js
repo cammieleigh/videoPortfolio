@@ -1,7 +1,7 @@
 import { createElement } from './utils';
 import { initRouter } from './router';
 import menuBtn from './images/menu-icon.webp';
-import logo from './images/logo-partial.PNG';
+import logo from './images/logo-partial.jpg';
 
 function Header(mainDiv) {
 
